@@ -9,273 +9,378 @@
         body { background: #faf3e8; color: #2c2c2c; line-height: 1.6; }
         .container { max-width: 1200px; margin: 0 auto; padding: 2rem; }
         
-        /* header - classic diner style */
-        header { background: #8B1E1E; color: #f5e6d3; padding: 2rem 0; text-align: center; border-bottom: 4px solid #c49a6c; }
-        h1 { font-size: 3.5rem; margin-bottom: 0.5rem; letter-spacing: 2px; font-weight: 700; text-transform: uppercase; text-shadow: 2px 2px 0px #4a1010; }
-        .tagline { font-size: 1.4rem; font-style: italic; letter-spacing: 1px; opacity: 0.9; margin-bottom: 1rem; }
-        .hours-badge { background: #c49a6c; color: #1e1e1e; display: inline-block; padding: 0.6rem 2rem; border-radius: 40px; font-weight: 600; font-size: 1.2rem; letter-spacing: 1px; border: 2px solid #f5e6d3; }
+        /* navigation */
+        nav { background: #2c2c2c; padding: 1rem 0; border-bottom: 3px solid #c49a6c; position: sticky; top: 0; z-index: 100; }
+        .nav-links { display: flex; justify-content: center; gap: 3rem; flex-wrap: wrap; }
+        .nav-links a { color: #f5e6d3; text-decoration: none; font-size: 1.3rem; letter-spacing: 1px; padding: 0.5rem 0; border-bottom: 2px solid transparent; transition: 0.2s; }
+        .nav-links a:hover { border-bottom-color: #c49a6c; color: #c49a6c; }
+        
+        /* header */
+        header { background: #8B1E1E; color: #f5e6d3; padding: 2.5rem 0; text-align: center; border-bottom: 4px solid #c49a6c; }
+        h1 { font-size: 4rem; margin-bottom: 0.5rem; letter-spacing: 3px; font-weight: 700; text-transform: uppercase; text-shadow: 2px 2px 0px #4a1010; }
+        .establish { font-size: 1.3rem; font-style: italic; letter-spacing: 2px; margin-bottom: 1rem; color: #e8d9c5; }
+        .hours-badge { background: #c49a6c; color: #1e1e1e; display: inline-block; padding: 0.6rem 2.5rem; font-weight: 600; font-size: 1.2rem; letter-spacing: 1px; border: 2px solid #f5e6d3; }
         
         /* contact bar */
-        .contact-bar { background: #2c2c2c; color: #f5e6d3; padding: 1.2rem 0; text-align: center; font-size: 1.4rem; border-bottom: 2px solid #c49a6c; }
-        .contact-bar a { color: #c49a6c; text-decoration: none; font-weight: bold; border-bottom: 1px dotted #c49a6c; }
+        .contact-bar { background: #1e1e1e; color: #f5e6d3; padding: 1.2rem 0; text-align: center; font-size: 1.3rem; border-bottom: 2px solid #c49a6c; }
+        .contact-bar a { color: #c49a6c; text-decoration: none; border-bottom: 1px dotted #c49a6c; }
         
-        /* cards - vintage feel */
-        .section-title { font-size: 2.4rem; margin: 2.5rem 0 1.5rem 0; border-left: 8px solid #8B1E1E; padding-left: 1.5rem; font-weight: 700; letter-spacing: 1px; text-transform: uppercase; color: #2c2c2c; }
-        .menu-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(280px, 1fr)); gap: 2rem; margin: 2rem 0; }
-        .menu-card { background: #fff9f2; border-radius: 0px; padding: 2rem; box-shadow: 8px 8px 0px rgba(0,0,0,0.1); border: 2px solid #d4a373; }
-        .menu-card h3 { color: #8B1E1E; font-size: 1.8rem; margin-bottom: 1rem; border-bottom: 2px solid #c49a6c; padding-bottom: 0.5rem; font-weight: 700; letter-spacing: 0.5px; }
+        /* page sections */
+        .page { display: none; }
+        .active-page { display: block; }
+        
+        /* menu styling */
+        .section-title { font-size: 2.5rem; margin: 2.5rem 0 1.5rem 0; border-left: 6px solid #8B1E1E; padding-left: 1.5rem; font-weight: 700; letter-spacing: 1px; text-transform: uppercase; color: #2c2c2c; }
+        .menu-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(300px, 1fr)); gap: 2rem; margin: 2rem 0; }
+        .menu-card { background: #fff9f2; padding: 2rem; box-shadow: 8px 8px 0px rgba(0,0,0,0.1); border: 2px solid #c49a6c; }
+        .menu-card h3 { color: #8B1E1E; font-size: 2rem; margin-bottom: 1rem; border-bottom: 2px solid #c49a6c; padding-bottom: 0.5rem; font-weight: 700; }
         .menu-item { display: flex; justify-content: space-between; margin: 0.75rem 0; font-size: 1.2rem; border-bottom: 1px dotted #c49a6c; padding-bottom: 0.5rem; }
         .price { font-weight: 700; color: #8B1E1E; font-size: 1.3rem; }
-        .badge { background: #c49a6c; color: #1e1e1e; padding: 0.3rem 1.5rem; border-radius: 0px; font-weight: 700; display: inline-block; margin: 0.5rem 0; font-size: 1.1rem; border: 2px solid #8B1E1E; }
+        .badge { background: #c49a6c; color: #1e1e1e; padding: 0.3rem 1.5rem; font-weight: 700; display: inline-block; margin: 0.5rem 0; font-size: 1.1rem; border: 2px solid #8B1E1E; }
         
-        /* order buttons - classic style */
+        /* order buttons */
         .order-row { display: flex; flex-wrap: wrap; gap: 1.2rem; justify-content: center; margin: 2.5rem 0; }
-        .order-btn { background: #8B1E1E; color: #f5e6d3; padding: 1rem 2.5rem; border-radius: 0px; text-decoration: none; font-weight: 700; font-size: 1.4rem; display: inline-flex; align-items: center; gap: 0.8rem; border: 3px solid #c49a6c; transition: 0.2s; text-transform: uppercase; letter-spacing: 1px; }
+        .order-btn { background: #8B1E1E; color: #f5e6d3; padding: 1rem 2.5rem; text-decoration: none; font-weight: 700; font-size: 1.3rem; display: inline-flex; align-items: center; gap: 0.8rem; border: 2px solid #c49a6c; transition: 0.2s; text-transform: uppercase; letter-spacing: 1px; }
         .order-btn:hover { background: #a52a2a; border-color: #f5e6d3; }
-        .order-btn.dd { background: #8B1E1E; }
-        .order-btn.ue { background: #2c2c2c; }
-        .order-btn.gh { background: #4a1010; }
         
         /* reviews */
-        .reviews { background: #fff9f2; border-radius: 0px; padding: 2.5rem; margin: 3rem 0; text-align: center; border: 3px solid #8B1E1E; box-shadow: 10px 10px 0px rgba(0,0,0,0.05); }
+        .reviews { background: #fff9f2; padding: 2.5rem; margin: 3rem 0; text-align: center; border: 3px solid #8B1E1E; box-shadow: 10px 10px 0px rgba(0,0,0,0.05); }
         .stars { color: #c49a6c; font-size: 2.5rem; letter-spacing: 8px; }
         .review-count { font-size: 1.4rem; color: #2c2c2c; font-style: italic; }
         
         /* footer */
         footer { background: #2c2c2c; color: #f5e6d3; padding: 2.5rem 0; text-align: center; margin-top: 4rem; border-top: 6px solid #8B1E1E; font-size: 1.1rem; }
-        .vape-note { background: #e8d9c5; border-radius: 0px; padding: 1.5rem; margin: 2rem 0; font-weight: 600; border-left: 8px solid #8B1E1E; border-right: 8px solid #8B1E1E; font-size: 1.2rem; }
+        .vape-note { background: #e8d9c5; padding: 1.5rem; margin: 2rem 0; border-left: 8px solid #8B1E1E; border-right: 8px solid #8B1E1E; font-size: 1.2rem; }
         
-        /* clickable images */
-        .clickable-img { cursor: pointer; transition: 0.3s; border: 4px solid #c49a6c; }
-        .clickable-img:hover { opacity: 0.9; border-color: #8B1E1E; }
+        /* images */
+        .hero-image { width: 100%; height: 450px; overflow: hidden; margin-bottom: 2rem; border: 6px solid #c49a6c; cursor: pointer; }
+        .hero-image img { width: 100%; height: 100%; object-fit: cover; }
+        .gallery-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(250px, 1fr)); gap: 1.5rem; margin: 2rem 0; }
+        .gallery-item { border: 4px solid #c49a6c; cursor: pointer; }
+        .gallery-item img { width: 100%; height: 250px; object-fit: cover; display: block; }
+        .vape-image { max-width: 500px; margin: 2rem auto; border: 6px solid #c49a6c; cursor: pointer; }
+        .vape-image img { width: 100%; display: block; }
         
-        @media (max-width: 600px) { h1 { font-size: 2.8rem; } }
-        
-        /* fancy touches */
-        p, li, span { font-size: 1.2rem; }
-        .menu-card p { font-style: italic; color: #4a4a4a; }
+        @media (max-width: 600px) { h1 { font-size: 3rem; } .nav-links { gap: 1.5rem; } }
     </style>
 </head>
 <body>
 
 <header>
     <div class="container">
-        <h1>🔥 SMOKE & EAT</h1>
-        <p class="tagline">established · since 2015 · west york</p>
-        <div class="hours-badge">OPEN 7AM–12AM DAILY</div>
+        <h1>SMOKE & EAT</h1>
+        <p class="establish">ESTABLISHED 2015 · WEST YORK</p>
+        <div class="hours-badge">OPEN DAILY 7AM – 12AM</div>
     </div>
 </header>
 
 <div class="contact-bar">
     <div class="container">
-        📍 40 Overbrook Ave, West York, PA 17404 &nbsp; | &nbsp; <a href="tel:+17173562543">📞 (717) 356-2543</a>
+        40 Overbrook Ave, West York, PA 17404 &nbsp; | &nbsp; <a href="tel:+17173562543">(717) 356-2543</a>
     </div>
 </div>
 
-<!-- HERO IMAGE (click to enlarge) -->
-<div style="width: 100%; height: 400px; overflow: hidden; margin-bottom: 2rem; cursor: pointer; border: 6px solid #c49a6c;" onclick="window.open('https://raw.githubusercontent.com/regonwe/Givv/main/IMG_8170.PNG', '_blank')">
-    <img src="https://raw.githubusercontent.com/regonwe/Givv/main/IMG_8170.PNG" style="width: 100%; height: 100%; object-fit: cover;" alt="Smoke & Eat pizza" class="clickable-img">
+<!-- Navigation -->
+<nav>
+    <div class="container">
+        <div class="nav-links">
+            <a href="#" onclick="showPage('home'); return false;">HOME</a>
+            <a href="#" onclick="showPage('menu'); return false;">MENU</a>
+            <a href="#" onclick="showPage('vapes'); return false;">VAPES</a>
+            <a href="#" onclick="showPage('deals'); return false;">DEALS</a>
+        </div>
+    </div>
+</nav>
+
+<!-- HOME PAGE -->
+<div id="home" class="page active-page">
+    <div class="container">
+        
+        <!-- Hero Image -->
+        <div class="hero-image" onclick="window.open('https://raw.githubusercontent.com/regonwe/Givv/main/IMG_8170.PNG', '_blank')">
+            <img src="https://raw.githubusercontent.com/regonwe/Givv/main/IMG_8170.PNG" alt="Smoke & Eat pizza">
+        </div>
+        
+        <!-- Delivery Buttons -->
+        <div class="order-row">
+            <a href="https://www.doordash.com/store/krispy-krunchy-chicken-west-york-24015541/27957549/" target="_blank" class="order-btn">DOORDASH</a>
+            <a href="https://www.ubereats.com/brand/krispy-krunchy-chicken" target="_blank" class="order-btn">UBER EATS</a>
+            <a href="https://www.grubhub.com/restaurant/krispy-krunchy-chicken-40-overbrook-ave-west-york/4707512" target="_blank" class="order-btn">GRUBHUB</a>
+        </div>
+        
+        <!-- Gallery -->
+        <h2 class="section-title">From The Kitchen</h2>
+        <div class="gallery-grid">
+            <div class="gallery-item" onclick="window.open('https://raw.githubusercontent.com/regonwe/Givv/main/IMG_8168.PNG', '_blank')">
+                <img src="https://raw.githubusercontent.com/regonwe/Givv/main/IMG_8168.PNG" alt="Wings and fryer">
+            </div>
+            <div class="gallery-item" onclick="window.open('https://raw.githubusercontent.com/regonwe/Givv/main/IMG_8169.PNG', '_blank')">
+                <img src="https://raw.githubusercontent.com/regonwe/Givv/main/IMG_8169.PNG" alt="Cheesesteaks and burgers">
+            </div>
+            <div class="gallery-item" onclick="window.open('https://raw.githubusercontent.com/regonwe/Givv/main/IMG_8172.PNG', '_blank')">
+                <img src="https://raw.githubusercontent.com/regonwe/Givv/main/IMG_8172.PNG" alt="Red Seal special">
+            </div>
+            <div class="gallery-item" onclick="window.open('https://raw.githubusercontent.com/regonwe/Givv/main/IMG_8174.PNG', '_blank')">
+                <img src="https://raw.githubusercontent.com/regonwe/Givv/main/IMG_8174.PNG" alt="Red Seal pizza">
+            </div>
+            <div class="gallery-item" onclick="window.open('https://raw.githubusercontent.com/regonwe/Givv/main/IMG_8175.PNG', '_blank')">
+                <img src="https://raw.githubusercontent.com/regonwe/Givv/main/IMG_8175.PNG" alt="Appetizers">
+            </div>
+        </div>
+        
+        <!-- Reviews -->
+        <div class="reviews">
+            <div class="stars">★★★★☆</div>
+            <p style="font-size: 2.5rem; font-weight: 700;">4.4 STARS</p>
+            <p class="review-count">Based on 44 Google reviews</p>
+            <p style="margin-top: 1.5rem; font-size: 1.3rem; font-style: italic;">"Best pizza in town" · "Great local spot" · "Krispy Krunchy chicken"</p>
+        </div>
+        
+        <!-- Call Button -->
+        <div style="text-align: center; margin: 4rem 0;">
+            <a href="tel:+17173562543" class="order-btn" style="background: #2c2c2c; font-size: 2rem; padding: 1.5rem 4rem; border: 3px solid #c49a6c;">CALL (717) 356-2543</a>
+        </div>
+        
+    </div>
 </div>
 
-<div class="container">
-    
-    <!-- ORDER ONLINE BUTTONS (Delivery Apps) -->
-    <div class="order-row">
-        <a href="https://www.doordash.com/store/krispy-krunchy-chicken-west-york-24015541/27957549/?fbclid=IwY2xjawQT18JleHRuA2FlbQIxMABicmlkETFPdW1jRDF2ZVNua3hpN25Zc3J0YwZhcHBfaWQQMjIyMDM5MTc4ODIwMDg5MgABHi-A7l-pWPCdUBwsWAIZ7C7v5LghtiW8tWsHYq2bt4sOGjrSsfEBnrxX8yFx_aem_zwEWSOr9JNwDDyDO3Uz7RQ&utm_source=mx_share_android" target="_blank" class="order-btn dd">🍔 DoorDash</a>
-        <a href="https://www.ubereats.com/brand/krispy-krunchy-chicken?msockid=1ed3f29879ad6c4f04e9e62978ff6d86" target="_blank" class="order-btn ue">🚗 Uber Eats</a>
-        <a href="https://www.grubhub.com/restaurant/krispy-krunchy-chicken-40-overbrook-ave-west-york/4707512?utm_source=grubhub_androidapp&utm_medium=content_owned&utm_campaign=menushare&utm_content=share-link&fbclid=IwY2xjawQT1tFleHRuA2FlbQIxMABicmlkETFPdW1jRDF2ZVNua3hpN25Zc3J0YwZhcHBfaWQQMjIyMDM5MTc4ODIwMDg5MgABHgYcmm4QwCMsMjYVY6Gk5TdB_55p3qHxhJIIC_9CaXTVfsJUk4xTgB15LfxJ_aem_9-HD_-pfAqDIxGsthOuNmw" target="_blank" class="order-btn gh">📦 Grubhub</a>
-    </div>
-
-    <!-- FOOD GALLERY (all images clickable) -->
-    <h2 class="section-title">📸 From The Kitchen</h2>
-    <div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(220px, 1fr)); gap: 1.5rem; margin: 2rem 0;">
-        <div style="cursor: pointer; border: 4px solid #c49a6c;" onclick="window.open('https://raw.githubusercontent.com/regonwe/Givv/main/IMG_8168.PNG', '_blank')">
-            <img src="https://raw.githubusercontent.com/regonwe/Givv/main/IMG_8168.PNG" style="width: 100%; height: 220px; object-fit: cover; display: block;" class="clickable-img">
+<!-- MENU PAGE -->
+<div id="menu" class="page">
+    <div class="container">
+        
+        <h2 class="section-title">Signature Pizza</h2>
+        <div class="menu-grid">
+            <div class="menu-card">
+                <h3>MEAT LOVERS</h3>
+                <p>pepperoni, sausage, ground beef, ham, bacon</p>
+                <div class="menu-item"><span>Small</span> <span class="price">12.99</span></div>
+                <div class="menu-item"><span>Medium</span> <span class="price">14.99</span></div>
+                <div class="menu-item"><span>Large</span> <span class="price">16.99</span></div>
+            </div>
+            <div class="menu-card">
+                <h3>CHICKEN FAJITA</h3>
+                <p>chicken, green peppers, tomato, onions</p>
+                <div class="menu-item"><span>Small</span> <span class="price">12.99</span></div>
+                <div class="menu-item"><span>Medium</span> <span class="price">14.99</span></div>
+                <div class="menu-item"><span>Large</span> <span class="price">16.99</span></div>
+            </div>
+            <div class="menu-card">
+                <h3>MEAL BUSTER</h3>
+                <p>pepperoni, sausage, beef, ham, bacon, mushrooms, olives, spinach</p>
+                <div class="menu-item"><span>Small</span> <span class="price">12.99</span></div>
+                <div class="menu-item"><span>Medium</span> <span class="price">14.99</span></div>
+                <div class="menu-item"><span>Large</span> <span class="price">16.99</span></div>
+            </div>
         </div>
-        <div style="cursor: pointer; border: 4px solid #c49a6c;" onclick="window.open('https://raw.githubusercontent.com/regonwe/Givv/main/IMG_8169.PNG', '_blank')">
-            <img src="https://raw.githubusercontent.com/regonwe/Givv/main/IMG_8169.PNG" style="width: 100%; height: 220px; object-fit: cover; display: block;" class="clickable-img">
+        
+        <div class="menu-card" style="margin: 2rem 0;">
+            <h3>BUILD YOUR OWN PIZZA</h3>
+            <p>Small $7.99 · Medium $9.99 · Large $12.99 · extra topping $1.49</p>
+            <p>Sauces: tomato, alfredo, buffalo, BBQ</p>
+            <p>Toppings: pepperoni, bacon, sausage, chicken, onions, green pepper, tomatoes, mushrooms, black olives, spinach, jalapenos</p>
         </div>
-        <div style="cursor: pointer; border: 4px solid #c49a6c;" onclick="window.open('https://raw.githubusercontent.com/regonwe/Givv/main/IMG_8171.PNG', '_blank')">
-            <img src="https://raw.githubusercontent.com/regonwe/Givv/main/IMG_8171.PNG" style="width: 100%; height: 220px; object-fit: cover; display: block;" class="clickable-img">
+        
+        <h2 class="section-title">Strombolis</h2>
+        <div class="menu-grid">
+            <div class="menu-card">
+                <h3>GROUND BEEF</h3>
+                <p>beef, cheese</p>
+                <div class="menu-item"><span>12 inch</span> <span class="price">12.99</span></div>
+            </div>
+            <div class="menu-card">
+                <h3>CHICKEN CHEESESTEAK</h3>
+                <p>chicken steak, peppers, onions, cheese</p>
+                <div class="menu-item"><span>12 inch</span> <span class="price">12.99</span></div>
+            </div>
         </div>
-        <div style="cursor: pointer; border: 4px solid #c49a6c;" onclick="window.open('https://raw.githubusercontent.com/regonwe/Givv/main/IMG_8172.PNG', '_blank')">
-            <img src="https://raw.githubusercontent.com/regonwe/Givv/main/IMG_8172.PNG" style="width: 100%; height: 220px; object-fit: cover; display: block;" class="clickable-img">
+        <p style="margin: 0 0 2rem 0; font-size: 1.3rem;"><strong>Build Your Own $15.99</strong> (3 toppings included, extra $1.49 each)</p>
+        
+        <h2 class="section-title">Cheesesteaks & More</h2>
+        <div class="menu-grid">
+            <div class="menu-card">
+                <h3>PHILLY CHEESESTEAK</h3>
+                <p>beef or chicken</p>
+                <div class="menu-item"><span>8 inch</span> <span class="price">8.99</span></div>
+                <div class="menu-item"><span>12 inch</span> <span class="price">11.99</span></div>
+            </div>
+            <div class="menu-card">
+                <h3>WRAPS</h3>
+                <p>caesar or buffalo</p>
+                <div class="menu-item"><span>Wrap</span> <span class="price">8.99</span></div>
+                <div class="menu-item"><span>Combo</span> <span class="price">12.99</span></div>
+            </div>
+            <div class="menu-card">
+                <h3>GYROS</h3>
+                <p>chicken or lamb</p>
+                <div class="menu-item"><span>Gyro</span> <span class="price">7.99</span></div>
+                <div class="menu-item"><span>Combo</span> <span class="price">11.99</span></div>
+            </div>
+            <div class="menu-card">
+                <h3>BURGERS</h3>
+                <p>cheeseburger · chicken · fish</p>
+                <div class="menu-item"><span>Sandwich</span> <span class="price">5.99</span></div>
+                <div class="menu-item"><span>Combo</span> <span class="price">9.99</span></div>
+            </div>
         </div>
-        <div style="cursor: pointer; border: 4px solid #c49a6c;" onclick="window.open('https://raw.githubusercontent.com/regonwe/Givv/main/IMG_8174.PNG', '_blank')">
-            <img src="https://raw.githubusercontent.com/regonwe/Givv/main/IMG_8174.PNG" style="width: 100%; height: 220px; object-fit: cover; display: block;" class="clickable-img">
-        </div>
-        <div style="cursor: pointer; border: 4px solid #c49a6c;" onclick="window.open('https://raw.githubusercontent.com/regonwe/Givv/main/IMG_8175.PNG', '_blank')">
-            <img src="https://raw.githubusercontent.com/regonwe/Givv/main/IMG_8175.PNG" style="width: 100%; height: 220px; object-fit: cover; display: block;" class="clickable-img">
-        </div>
-    </div>
-
-    <!-- ========== PIZZA ========== -->
-    <h2 class="section-title">🍕 Signature Pizza</h2>
-    <div class="menu-grid">
+        
+        <h2 class="section-title">Wings</h2>
         <div class="menu-card">
-            <h3>MEAT LOVERS</h3>
-            <p>pepperoni, sausage, ground beef, ham, bacon</p>
-            <div class="menu-item"><span>Small</span> <span class="price">$12.99</span></div>
-            <div class="menu-item"><span>Medium</span> <span class="price">$14.99</span></div>
-            <div class="menu-item"><span>Large</span> <span class="price">$16.99</span></div>
+            <h3>SAUCY WINGS</h3>
+            <p>Flavors: hot buffalo · mild buffalo · BBQ · honey BBQ</p>
+            <div class="menu-item"><span>6 pieces</span> <span class="price">8.99</span></div>
+            <div class="menu-item"><span>9 pieces</span> <span class="price">11.99</span></div>
+            <div class="menu-item"><span>12 pieces</span> <span class="price">14.99</span></div>
+            <p class="badge">1 free dip · extra dip $0.50</p>
         </div>
-        <div class="menu-card">
-            <h3>CHICKEN FAJITA</h3>
-            <p>chicken, green peppers, tomato, onions</p>
-            <div class="menu-item"><span>Small</span> <span class="price">$12.99</span></div>
-            <div class="menu-item"><span>Medium</span> <span class="price">$14.99</span></div>
-            <div class="menu-item"><span>Large</span> <span class="price">$16.99</span></div>
+        
+        <h2 class="section-title">Fryer World</h2>
+        <div class="menu-grid">
+            <div class="menu-card">Tilapia w/fries 2pc $8.99</div>
+            <div class="menu-card">Nuggets 6pc $7.99 / 10pc $9.99</div>
+            <div class="menu-card">Strips 3pc $7.99 / 5pc $9.99</div>
+            <div class="menu-card">Mozzarella sticks 6pc $6.99</div>
+            <div class="menu-card">Fried mushrooms 12pc $7.99</div>
+            <div class="menu-card">Jalapeno poppers 6pc $6.99</div>
+            <div class="menu-card">Onion rings 8pc $6.99</div>
         </div>
-        <div class="menu-card">
-            <h3>MEAL BUSTER</h3>
-            <p>pepperoni, sausage, beef, ham, bacon, mushrooms, olives, spinach</p>
-            <div class="menu-item"><span>Small</span> <span class="price">$12.99</span></div>
-            <div class="menu-item"><span>Medium</span> <span class="price">$14.99</span></div>
-            <div class="menu-item"><span>Large</span> <span class="price">$16.99</span></div>
+        
+        <h2 class="section-title">Rice Platters</h2>
+        <div class="menu-grid">
+            <div class="menu-card"><h3>Chicken</h3> <span class="price">11.99</span></div>
+            <div class="menu-card"><h3>Lamb</h3> <span class="price">11.99</span></div>
+            <div class="menu-card"><h3>Tilapia</h3> <span class="price">11.99</span></div>
+            <div class="menu-card"><h3>Mix</h3> <span class="price">13.99</span></div>
         </div>
+        <p style="font-size: 1.2rem;">white sauce · hot sauce · includes soda</p>
+        
+        <h2 class="section-title">Fries</h2>
+        <div class="menu-grid">
+            <div class="menu-card">Regular S $2.99 / L $4.99</div>
+            <div class="menu-card">Pizza Fries $7.99</div>
+            <div class="menu-card">Loaded Bacon Fries $7.99</div>
+            <div class="menu-card">Philly Steak Fries $7.99</div>
+        </div>
+        
+        <h2 class="section-title">Salads</h2>
+        <div class="menu-grid">
+            <div class="menu-card">Caesar $9.99</div>
+            <div class="menu-card">Greek $9.99</div>
+            <div class="menu-card">Garden $7.99</div>
+            <div class="menu-card">Grilled Chicken $9.99</div>
+        </div>
+        
+        <h2 class="section-title">Smoothies</h2>
+        <div class="menu-grid">
+            <div class="menu-card">Sunrise (banana, mango, orange)</div>
+            <div class="menu-card">Berry Breeze (banana, strawberry, pineapple)</div>
+            <div class="menu-card">Sunny Banana</div>
+            <div class="menu-card">Build Your Own</div>
+        </div>
+        <p><strong>$4.99 L $6.99</strong></p>
+        
+        <h2 class="section-title">Red Seal Specials</h2>
+        <div class="menu-grid">
+            <div class="menu-card"><h3>8" pizza + 5pc wings</h3> <span class="price">12.99</span></div>
+            <div class="menu-card"><h3>Red Seal Cheese Pizza</h3>12" $6.99 · 14" $8.99 · 16" $11.99<br>toppings +$1.25</div>
+        </div>
+        
+        <h2 class="section-title">Appetizers</h2>
+        <div class="menu-grid">
+            <div class="menu-card">Mozzarella sticks SM $3.99 / LG $6.99</div>
+            <div class="menu-card">Egg Roll $1.99 (cheesesteak or southwest)</div>
+            <div class="menu-card">Onion Rings $3.99</div>
+            <div class="menu-card">Chicken Nuggets 5pc $2.99 / 10pc $4.49</div>
+            <div class="menu-card">Fried Fish 1pc $5.59 / 2pc $9.99 / 3pc $13.99</div>
+            <div class="menu-card">Boneless Wings 6pc $5.49 / 10pc $6.99</div>
+        </div>
+        
     </div>
+</div>
 
-    <div class="menu-card" style="margin: 2rem 0;">
-        <h3>🍕 Build Your Own Pizza</h3>
-        <p><strong>Small $7.99</strong> · <strong>Medium $9.99</strong> · <strong>Large $12.99</strong> · extra topping $1.49</p>
-        <p><strong>Sauces:</strong> tomato, alfredo, buffalo, BBQ</p>
-        <p><strong>Toppings:</strong> pepperoni, bacon, sausage, chicken, onions, green pepper, tomatoes, mushrooms, black olives, spinach, jalapenos</p>
+<!-- VAPES PAGE -->
+<div id="vapes" class="page">
+    <div class="container">
+        
+        <h2 class="section-title">Vapes · 35K Puffs</h2>
+        
+        <div class="vape-image" onclick="window.open('https://raw.githubusercontent.com/regonwe/Givv/main/IMG_8171.PNG', '_blank')">
+            <img src="https://raw.githubusercontent.com/regonwe/Givv/main/IMG_8171.PNG" alt="Vape flavors">
+        </div>
+        
+        <div class="vape-note">
+            <p style="font-size: 1.3rem;"><strong>New Flavors</strong></p>
+            <p style="margin-top: 1rem;">White Yummy Ice · Watermelon Ice · Blue Raz Ice · Triple Berry · Rainbow · Miami Mint · Raspberry Watermelon · Orange Mango · Peach Passionfruit · Sour Apple Ice</p>
+            <p style="font-size: 1.3rem; margin-top: 2rem; border-top: 2px solid #8B1E1E; padding-top: 1rem;">🚭 Must be 21+</p>
+        </div>
+        
     </div>
+</div>
 
-    <!-- ========== STROMBOLIS ========== -->
-    <h2 class="section-title">🥩 Strombolis</h2>
-    <div class="menu-grid">
-        <div class="menu-card"><h3>GROUND BEEF BOLI</h3><p>beef, cheese</p><div class="menu-item"><span>12 inch</span><span class="price">$12.99</span></div></div>
-        <div class="menu-card"><h3>CHICKEN CHEESESTEAK BOLI</h3><p>chicken steak, peppers, onions, cheese</p><div class="menu-item"><span>12 inch</span><span class="price">$12.99</span></div></div>
+<!-- DEALS PAGE -->
+<div id="deals" class="page">
+    <div class="container">
+        
+        <h2 class="section-title">Current Specials</h2>
+        
+        <div class="menu-grid">
+            <div class="menu-card">
+                <h3>PIZZA & WINGS</h3>
+                <p>1 large 2 topping pizza</p>
+                <p>+ 6pc wings</p>
+                <p>+ 1L soda</p>
+                <div class="menu-item"><span></span> <span class="price">19.99</span></div>
+            </div>
+            <div class="menu-card">
+                <h3>RICE PLATTER & WRAP</h3>
+                <p>1 rice platter</p>
+                <p>+ 1 wrap</p>
+                <p>+ 1L soda</p>
+                <div class="menu-item"><span></span> <span class="price">17.99</span></div>
+            </div>
+            <div class="menu-card">
+                <h3>WINGS SPECIAL</h3>
+                <p>25pc wings</p>
+                <div class="menu-item"><span></span> <span class="price">29.99</span></div>
+            </div>
+            <div class="menu-card">
+                <h3>MONDAY–WEDNESDAY</h3>
+                <p>2 large 2 topping pizzas</p>
+                <div class="menu-item"><span></span> <span class="price">14.99</span></div>
+            </div>
+        </div>
+        
+        <div class="menu-card" style="margin-top: 2rem;">
+            <h3>RED SEAL SPECIAL</h3>
+            <p>8 inch pizza + 5pc traditional wings</p>
+            <div class="menu-item"><span></span> <span class="price">12.99</span></div>
+        </div>
+        
     </div>
-    <p style="margin: 0 0 2rem 0; font-size: 1.3rem;"><strong>Build Your Own $15.99</strong> (3 toppings included, extra $1.49 each)</p>
-
-    <!-- ========== CHEESESTEAKS · WRAPS · GYROS · BURGERS ========== -->
-    <h2 class="section-title">🥪 Cheesesteaks & More</h2>
-    <div class="menu-grid">
-        <div class="menu-card"><h3>PHILLY CHEESESTEAK</h3><p>beef or chicken</p><div class="menu-item"><span>8" $8.99</span><span class="price">12" $11.99</span></div></div>
-        <div class="menu-card"><h3>WRAPS</h3><p>caesar or buffalo</p><div class="menu-item"><span>wrap $8.99</span><span class="price">combo $12.99</span></div></div>
-        <div class="menu-card"><h3>GYROS</h3><p>chicken or lamb</p><div class="menu-item"><span>gyro $7.99</span><span class="price">combo $11.99</span></div></div>
-        <div class="menu-card"><h3>BURGERS</h3><p>cheeseburger · chicken · fish</p><div class="menu-item"><span>sandwich $5.99</span><span class="price">combo $9.99</span></div></div>
-    </div>
-
-    <!-- ========== SALADS ========== -->
-    <h2 class="section-title">🥗 Salads</h2>
-    <div class="menu-grid">
-        <div class="menu-card">Caesar $9.99</div><div class="menu-card">Greek $9.99</div>
-        <div class="menu-card">Garden $7.99</div><div class="menu-card">Grilled Chicken $9.99</div>
-    </div>
-
-    <!-- ========== WINGS ========== -->
-    <h2 class="section-title">🍗 Wings · Saucy</h2>
-    <div class="menu-card">
-        <p><strong>Flavors:</strong> hot buffalo · mild buffalo · BBQ · honey BBQ</p>
-        <div class="menu-item"><span>6 pieces</span><span class="price">$8.99</span></div>
-        <div class="menu-item"><span>9 pieces</span><span class="price">$11.99</span></div>
-        <div class="menu-item"><span>12 pieces</span><span class="price">$14.99</span></div>
-        <p class="badge">1 free dip · extra dip $0.50</p>
-    </div>
-
-    <!-- ========== FRYER WORLD ========== -->
-    <h2 class="section-title">🍟 Fryer World</h2>
-    <div class="menu-grid">
-        <div class="menu-card">Tilapia w/fries 2pc $8.99</div>
-        <div class="menu-card">Nuggets 6pc $7.99 / 10pc $9.99</div>
-        <div class="menu-card">Strips 3pc $7.99 / 5pc $9.99</div>
-        <div class="menu-card">Mozzarella sticks 6pc $6.99</div>
-        <div class="menu-card">Fried mushrooms 12pc $7.99</div>
-        <div class="menu-card">Jalapeno poppers 6pc $6.99</div>
-        <div class="menu-card">Onion rings 8pc $6.99</div>
-    </div>
-
-    <!-- ========== RICE PLATTERS ========== -->
-    <h2 class="section-title">🍚 Rice Platters</h2>
-    <div class="menu-grid">
-        <div class="menu-card"><h3>Chicken</h3><div class="price">$11.99</div></div>
-        <div class="menu-card"><h3>Lamb</h3><div class="price">$11.99</div></div>
-        <div class="menu-card"><h3>Tilapia</h3><div class="price">$11.99</div></div>
-        <div class="menu-card"><h3>Mix</h3><div class="price">$13.99</div></div>
-    </div>
-    <p style="font-size: 1.2rem;">white sauce · hot sauce · includes soda</p>
-
-    <!-- ========== HEAVEN OF FRIES ========== -->
-    <h2 class="section-title">🍟 Heaven of Fries</h2>
-    <div class="menu-grid">
-        <div class="menu-card">Regular S $2.99 / L $4.99</div>
-        <div class="menu-card">Pizza Fries $7.99</div>
-        <div class="menu-card">Loaded Bacon Fries $7.99</div>
-        <div class="menu-card">Philly Steak Fries $7.99</div>
-    </div>
-
-    <!-- ========== SMOOTHIES ========== -->
-    <h2 class="section-title">🥤 Smoothies</h2>
-    <div class="menu-grid">
-        <div class="menu-card">Sunrise (banana, mango, orange)</div>
-        <div class="menu-card">Berry Breeze (banana, strawberry, pineapple)</div>
-        <div class="menu-card">Sunny Banana</div>
-        <div class="menu-card">Build Your Own</div>
-    </div>
-    <p><strong>$4.99 L $6.99</strong></p>
-
-    <!-- ========== RED SEAL SPECIALS ========== -->
-    <h2 class="section-title">🔴 Red Seal Specials</h2>
-    <div class="menu-grid">
-        <div class="menu-card"><h3>8" pizza + 5pc wings</h3><div class="price">$12.99</div></div>
-        <div class="menu-card"><h3>Red Seal Cheese Pizza</h3>12" $6.99 · 14" $8.99 · 16" $11.99<br>toppings +$1.25</div>
-    </div>
-
-    <!-- ========== DEALS ========== -->
-    <h2 class="section-title">💰 Today's Deals</h2>
-    <div class="menu-grid">
-        <div class="menu-card">🔥 1 large 2 topping pizza + 6pc wings + 1L soda <strong>$19.99</strong></div>
-        <div class="menu-card">🔥 1 rice platter + 1 wrap + 1L soda <strong>$17.99</strong></div>
-        <div class="menu-card">🔥 25pc wings <strong>$29.99</strong></div>
-        <div class="menu-card">🔥 2 large 2 topping pizzas <strong>$14.99</strong> (Mon–Wed)</div>
-    </div>
-
-    <!-- ========== VAPES ========== -->
-    <h2 class="section-title">💨 Vapes · 35K Puffs</h2>
-    <div style="cursor: pointer; text-align: center; border: 6px solid #c49a6c; margin: 2rem 0;" onclick="window.open('https://raw.githubusercontent.com/regonwe/Givv/main/IMG_8171.PNG', '_blank')">
-        <img src="https://raw.githubusercontent.com/regonwe/Givv/main/IMG_8171.PNG" style="width: 100%; max-width: 500px; margin: 0 auto; display: block;" class="clickable-img">
-    </div>
-    <div class="vape-note">
-        <p><strong>New Flavors:</strong> White Yummy Ice · Watermelon Ice · Blue Raz Ice · Triple Berry · Rainbow · Miami Mint · Raspberry Watermelon · Orange Mango · Peach Passionfruit · Sour Apple Ice</p>
-        <p style="font-size: 1.3rem; margin-top: 1rem;">🚭 must be 21+</p>
-    </div>
-
-    <!-- ========== APPETIZERS ========== -->
-    <h2 class="section-title">🍽️ Appetizers</h2>
-    <div class="menu-grid">
-        <div class="menu-card">Mozzarella sticks SM $3.99 / LG $6.99</div>
-        <div class="menu-card">Egg Roll $1.99 (cheesesteak or southwest)</div>
-        <div class="menu-card">Onion Rings $3.99</div>
-        <div class="menu-card">Chicken Nuggets 5pc $2.99 / 10pc $4.49</div>
-        <div class="menu-card">Fried Fish 1pc $5.59 / 2pc $9.99 / 3pc $13.99</div>
-        <div class="menu-card">Boneless Wings 6pc $5.49 / 10pc $6.99</div>
-    </div>
-
-    <!-- ========== REVIEWS ========== -->
-    <div class="reviews">
-        <div class="stars">★★★★☆</div>
-        <p style="font-size: 2.5rem; font-weight: 700;">4.4 stars</p>
-        <p class="review-count">Based on 44 Google reviews</p>
-        <p style="margin-top: 1.5rem; font-size: 1.3rem; font-style: italic;">"Best pizza in town!" · "Great local spot" · "Krispy Krunchy chicken is 🔥"</p>
-    </div>
-
-    <!-- CALL BUTTON (prominent) -->
-    <div style="text-align: center; margin: 4rem 0;">
-        <a href="tel:+17173562543" class="order-btn" style="background: #2c2c2c; font-size: 2.2rem; padding: 1.5rem 4rem; border: 4px solid #c49a6c;">📞 CALL NOW · (717) 356-2543</a>
-    </div>
-
 </div>
 
 <footer>
     <div class="container">
-        <p style="font-size: 1.3rem;"><strong>SMOKE & EAT</strong> · 40 Overbrook Ave, West York, PA 17404</p>
-        <p style="font-size: 1.2rem;">Daily 7am–12am · Lunch 10am–10pm</p>
-        <p style="margin-top: 1.5rem; color: #c49a6c; font-size: 1.1rem; border-top: 2px solid #c49a6c; padding-top: 1.5rem;">Website crafted by <strong>Givv</strong> · Monthly updates available · (717) 356-2543</p>
+        <p style="font-size: 1.3rem;">SMOKE & EAT · 40 Overbrook Ave, West York, PA 17404</p>
+        <p style="font-size: 1.2rem;">Daily 7am – 12am · Lunch 10am – 10pm</p>
+        <p style="margin-top: 1.5rem; color: #c49a6c; border-top: 2px solid #c49a6c; padding-top: 1.5rem;">Website by Givv · Monthly updates available · (717) 356-2543</p>
     </div>
 </footer>
+
+<script>
+    function showPage(pageId) {
+        // Hide all pages
+        document.getElementById('home').classList.remove('active-page');
+        document.getElementById('menu').classList.remove('active-page');
+        document.getElementById('vapes').classList.remove('active-page');
+        document.getElementById('deals').classList.remove('active-page');
+        
+        // Show selected page
+        document.getElementById(pageId).classList.add('active-page');
+        
+        // Scroll to top
+        window.scrollTo(0, 0);
+    }
+</script>
 
 </body>
 </html>
