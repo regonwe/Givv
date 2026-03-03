@@ -45,6 +45,10 @@
         footer { background: #1e1e1e; color: #aaa; padding: 2rem 0; text-align: center; margin-top: 3rem; }
         .vape-note { background: #e0e0e0; border-radius: 16px; padding: 1rem; margin: 1rem 0; font-weight: bold; }
         
+        /* clickable images */
+        .clickable-img { cursor: pointer; transition: 0.2s; }
+        .clickable-img:hover { opacity: 0.9; }
+        
         @media (max-width: 600px) { h1 { font-size: 2.2rem; } }
     </style>
 </head>
@@ -64,11 +68,9 @@
     </div>
 </div>
 
-<!-- HERO IMAGE -->
-<div style="width: 100%; height: 350px; overflow: hidden; margin-bottom: 2rem;">
-    <img src="https://raw.githubusercontent.com/regonwe/Givv/main/IMG_8170.PNG" 
-         style="width: 100%; height: 100%; object-fit: cover;" 
-         alt="Smoke & Eat pizza">
+<!-- HERO IMAGE (click to enlarge) -->
+<div style="width: 100%; height: 350px; overflow: hidden; margin-bottom: 2rem; cursor: pointer;" onclick="window.open('https://raw.githubusercontent.com/regonwe/Givv/main/IMG_8170.PNG', '_blank')">
+    <img src="https://raw.githubusercontent.com/regonwe/Givv/main/IMG_8170.PNG" style="width: 100%; height: 100%; object-fit: cover;" alt="Smoke & Eat pizza" class="clickable-img">
 </div>
 
 <div class="container">
@@ -80,15 +82,27 @@
         <a href="https://www.grubhub.com/restaurant/krispy-krunchy-chicken-40-overbrook-ave-west-york/4707512?utm_source=grubhub_androidapp&utm_medium=content_owned&utm_campaign=menushare&utm_content=share-link&fbclid=IwY2xjawQT1tFleHRuA2FlbQIxMABicmlkETFPdW1jRDF2ZVNua3hpN25Zc3J0YwZhcHBfaWQQMjIyMDM5MTc4ODIwMDg5MgABHgYcmm4QwCMsMjYVY6Gk5TdB_55p3qHxhJIIC_9CaXTVfsJUk4xTgB15LfxJ_aem_9-HD_-pfAqDIxGsthOuNmw" target="_blank" class="order-btn gh">📦 Grubhub</a>
     </div>
 
-    <!-- FOOD GALLERY -->
+    <!-- FOOD GALLERY (all images clickable) -->
     <h2 class="section-title">📸 FROM THE MENU</h2>
     <div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(200px, 1fr)); gap: 1rem; margin: 2rem 0;">
-        <img src="https://raw.githubusercontent.com/regonwe/Givv/main/IMG_8168.PNG" style="width: 100%; height: 200px; object-fit: cover; border-radius: 16px; border: 2px solid #fff; box-shadow: 0 4px 8px rgba(0,0,0,0.1);">
-        <img src="https://raw.githubusercontent.com/regonwe/Givv/main/IMG_8169.PNG" style="width: 100%; height: 200px; object-fit: cover; border-radius: 16px; border: 2px solid #fff; box-shadow: 0 4px 8px rgba(0,0,0,0.1);">
-        <img src="https://raw.githubusercontent.com/regonwe/Givv/main/IMG_8171.PNG" style="width: 100%; height: 200px; object-fit: cover; border-radius: 16px; border: 2px solid #fff; box-shadow: 0 4px 8px rgba(0,0,0,0.1);">
-        <img src="https://raw.githubusercontent.com/regonwe/Givv/main/IMG_8172.PNG" style="width: 100%; height: 200px; object-fit: cover; border-radius: 16px; border: 2px solid #fff; box-shadow: 0 4px 8px rgba(0,0,0,0.1);">
-        <img src="https://raw.githubusercontent.com/regonwe/Givv/main/IMG_8174.PNG" style="width: 100%; height: 200px; object-fit: cover; border-radius: 16px; border: 2px solid #fff; box-shadow: 0 4px 8px rgba(0,0,0,0.1);">
-        <img src="https://raw.githubusercontent.com/regonwe/Givv/main/IMG_8175.PNG" style="width: 100%; height: 200px; object-fit: cover; border-radius: 16px; border: 2px solid #fff; box-shadow: 0 4px 8px rgba(0,0,0,0.1);">
+        <div style="cursor: pointer;" onclick="window.open('https://raw.githubusercontent.com/regonwe/Givv/main/IMG_8168.PNG', '_blank')">
+            <img src="https://raw.githubusercontent.com/regonwe/Givv/main/IMG_8168.PNG" style="width: 100%; height: 200px; object-fit: cover; border-radius: 16px; border: 2px solid #fff; box-shadow: 0 4px 8px rgba(0,0,0,0.1);" class="clickable-img">
+        </div>
+        <div style="cursor: pointer;" onclick="window.open('https://raw.githubusercontent.com/regonwe/Givv/main/IMG_8169.PNG', '_blank')">
+            <img src="https://raw.githubusercontent.com/regonwe/Givv/main/IMG_8169.PNG" style="width: 100%; height: 200px; object-fit: cover; border-radius: 16px; border: 2px solid #fff; box-shadow: 0 4px 8px rgba(0,0,0,0.1);" class="clickable-img">
+        </div>
+        <div style="cursor: pointer;" onclick="window.open('https://raw.githubusercontent.com/regonwe/Givv/main/IMG_8171.PNG', '_blank')">
+            <img src="https://raw.githubusercontent.com/regonwe/Givv/main/IMG_8171.PNG" style="width: 100%; height: 200px; object-fit: cover; border-radius: 16px; border: 2px solid #fff; box-shadow: 0 4px 8px rgba(0,0,0,0.1);" class="clickable-img">
+        </div>
+        <div style="cursor: pointer;" onclick="window.open('https://raw.githubusercontent.com/regonwe/Givv/main/IMG_8172.PNG', '_blank')">
+            <img src="https://raw.githubusercontent.com/regonwe/Givv/main/IMG_8172.PNG" style="width: 100%; height: 200px; object-fit: cover; border-radius: 16px; border: 2px solid #fff; box-shadow: 0 4px 8px rgba(0,0,0,0.1);" class="clickable-img">
+        </div>
+        <div style="cursor: pointer;" onclick="window.open('https://raw.githubusercontent.com/regonwe/Givv/main/IMG_8174.PNG', '_blank')">
+            <img src="https://raw.githubusercontent.com/regonwe/Givv/main/IMG_8174.PNG" style="width: 100%; height: 200px; object-fit: cover; border-radius: 16px; border: 2px solid #fff; box-shadow: 0 4px 8px rgba(0,0,0,0.1);" class="clickable-img">
+        </div>
+        <div style="cursor: pointer;" onclick="window.open('https://raw.githubusercontent.com/regonwe/Givv/main/IMG_8175.PNG', '_blank')">
+            <img src="https://raw.githubusercontent.com/regonwe/Givv/main/IMG_8175.PNG" style="width: 100%; height: 200px; object-fit: cover; border-radius: 16px; border: 2px solid #fff; box-shadow: 0 4px 8px rgba(0,0,0,0.1);" class="clickable-img">
+        </div>
     </div>
 
     <!-- ========== PIZZA ========== -->
@@ -217,8 +231,9 @@
 
     <!-- ========== VAPES ========== -->
     <h2 class="section-title">💨 VAPES · 35K PUFFS</h2>
-    <img src="https://raw.githubusercontent.com/regonwe/Givv/main/IMG_8171.png" 
-         style="width: 100%; max-width: 400px; margin: 1rem auto; display: block; border-radius: 24px; box-shadow: 0 8px 16px rgba(0,0,0,0.1);">
+    <div style="cursor: pointer; text-align: center;" onclick="window.open('https://raw.githubusercontent.com/regonwe/Givv/main/IMG_8171.PNG', '_blank')">
+        <img src="https://raw.githubusercontent.com/regonwe/Givv/main/IMG_8171.PNG" style="width: 100%; max-width: 400px; margin: 1rem auto; display: block; border-radius: 24px; box-shadow: 0 8px 16px rgba(0,0,0,0.1);" class="clickable-img">
+    </div>
     <div class="vape-note">
         <p><strong>NEW FLAVORS:</strong> White Yummy Ice · Watermelon Ice · Blue Raz Ice · Triple Berry · Rainbow · Miami Mint · Raspberry Watermelon · Orange Mango · Peach Passionfruit · Sour Apple Ice</p>
         <p>🚭 must be 21+</p>
