@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Local Restaurant · Free Website Demo</title>
+    <style>
+        * { margin: 0; padding: 0; box-sizing: border-box; font-family: system-ui, -apple-system, 'Segoe UI', Roboto, sans-serif; }
+        body { background: #faf7f2; color: #1e1e1e; line-height: 1.6; }
+        .container { max-width: 1100px; margin: 0 auto; padding: 2rem; }
+        header { background: #b43b3b; color: white; padding: 2rem 0; text-align: center; }
+        h1 { font-size: 2.8rem; margin-bottom: 0.5rem; }
+        .tagline { font-size: 1.2rem; opacity: 0.9; }
+        .card { background: white; border-radius: 24px; padding: 2rem; margin: 2rem 0; box-shadow: 0 8px 20px rgba(0,0,0,0.05); }
+        .menu-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(240px, 1fr)); gap: 1.5rem; margin-top: 2rem; }
+        .menu-item { background: #fff3e6; padding: 1rem; border-radius: 20px; text-align: center; }
+        .hours { background: #1e1e1e; color: white; padding: 1.5rem; border-radius: 40px; text-align: center; margin: 2rem 0; }
+        .btn { background: #b43b3b; color: white; border: none; padding: 1rem 2.5rem; font-size: 1.3rem; border-radius: 60px; cursor: pointer; font-weight: bold; display: inline-block; text-decoration: none; }
+        .footer-note { text-align: center; margin-top: 3rem; color: #555; }
+    </style>
+</head>
+<body>
+    <header>
+        <div class="container">
+            <h1>🔥 LOS POLLOS</h1>
+            <p class="tagline">family recipes · fresh daily</p>
+        </div>
+    </header>
+
+    <div class="container">
+        <!-- Hours & contact -->
+        <div class="hours">
+            <p style="font-size: 1.5rem;">📍 123 Main St · (555) 123-4567</p>
+            <p>Mon–Sat: 11am–10pm  |  Sunday: 12pm–8pm</p>
+        </div>
+
+        <!-- Menu preview -->
+        <div class="card">
+            <h2 style="font-size: 2rem; margin-bottom: 1rem;">🔥 house favorites</h2>
+            <div class="menu-grid">
+                <div class="menu-item"><strong>Grilled Chicken Plate</strong><br> $14.99</div>
+                <div class="menu-item"><strong>Carne Asada Tacos</strong><br> $12.99</div>
+                <div class="menu-item"><strong>Veggie Burrito</strong><br> $11.49</div>
+                <div class="menu-item"><strong>Fresh Agua Fresca</strong><br> $4.99</div>
+            </div>
+        </div>
+
+        <!-- Call to action -->
+        <div style="text-align: center; margin: 3rem 0;">
+            <a href="#" class="btn">📞 CALL TO ORDER</a>
+        </div>
+
+        <p class="footer-note">✨ free demo site for local restaurants · built by givv ✨</p>
+    </div>
+</body>
+</html>
