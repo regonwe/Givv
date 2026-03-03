@@ -3,54 +3,239 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Local Restaurant · Free Website Demo</title>
+    <title>Smoke & Eat · West York, PA</title>
     <style>
         * { margin: 0; padding: 0; box-sizing: border-box; font-family: system-ui, -apple-system, 'Segoe UI', Roboto, sans-serif; }
-        body { background: #faf7f2; color: #1e1e1e; line-height: 1.6; }
-        .container { max-width: 1100px; margin: 0 auto; padding: 2rem; }
-        header { background: #b43b3b; color: white; padding: 2rem 0; text-align: center; }
-        h1 { font-size: 2.8rem; margin-bottom: 0.5rem; }
-        .tagline { font-size: 1.2rem; opacity: 0.9; }
-        .card { background: white; border-radius: 24px; padding: 2rem; margin: 2rem 0; box-shadow: 0 8px 20px rgba(0,0,0,0.05); }
-        .menu-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(240px, 1fr)); gap: 1.5rem; margin-top: 2rem; }
-        .menu-item { background: #fff3e6; padding: 1rem; border-radius: 20px; text-align: center; }
-        .hours { background: #1e1e1e; color: white; padding: 1.5rem; border-radius: 40px; text-align: center; margin: 2rem 0; }
-        .btn { background: #b43b3b; color: white; border: none; padding: 1rem 2.5rem; font-size: 1.3rem; border-radius: 60px; cursor: pointer; font-weight: bold; display: inline-block; text-decoration: none; }
-        .footer-note { text-align: center; margin-top: 3rem; color: #555; }
+        body { background: #faf7f2; color: #1e1e1e; line-height: 1.5; }
+        .container { max-width: 1200px; margin: 0 auto; padding: 1.5rem; }
+        
+        /* header */
+        header { background: #8B1E1E; color: white; padding: 1.5rem 0; text-align: center; }
+        h1 { font-size: 2.8rem; margin-bottom: 0.25rem; letter-spacing: 1px; }
+        .tagline { font-size: 1.2rem; opacity: 0.9; margin-bottom: 0.75rem; }
+        .hours-badge { background: #F5C542; color: #1e1e1e; display: inline-block; padding: 0.5rem 1.5rem; border-radius: 40px; font-weight: bold; margin: 0.5rem 0; }
+        
+        /* contact bar */
+        .contact-bar { background: #222; color: white; padding: 1rem 0; text-align: center; font-size: 1.3rem; }
+        .contact-bar a { color: #F5C542; text-decoration: none; font-weight: bold; }
+        
+        /* cards */
+        .section-title { font-size: 2rem; margin: 2rem 0 1rem 0; border-left: 8px solid #8B1E1E; padding-left: 1rem; }
+        .menu-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(260px, 1fr)); gap: 1.5rem; margin: 1.5rem 0; }
+        .menu-card { background: white; border-radius: 24px; padding: 1.5rem; box-shadow: 0 4px 12px rgba(0,0,0,0.05); border: 1px solid #eee; }
+        .menu-card h3 { color: #8B1E1E; font-size: 1.6rem; margin-bottom: 1rem; border-bottom: 2px dashed #ddd; padding-bottom: 0.5rem; }
+        .menu-item { display: flex; justify-content: space-between; margin: 0.75rem 0; }
+        .price { font-weight: bold; color: #1e1e1e; }
+        .badge { background: #F5C542; padding: 0.2rem 1rem; border-radius: 40px; font-weight: bold; display: inline-block; margin: 0.5rem 0; }
+        
+        /* order buttons */
+        .order-row { display: flex; flex-wrap: wrap; gap: 1rem; justify-content: center; margin: 2rem 0; }
+        .order-btn { background: #8B1E1E; color: white; padding: 1rem 2rem; border-radius: 60px; text-decoration: none; font-weight: bold; font-size: 1.3rem; display: inline-flex; align-items: center; gap: 0.5rem; box-shadow: 0 4px 10px rgba(139,30,30,0.3); transition: 0.2s; }
+        .order-btn:hover { background: #a52a2a; transform: scale(1.02); }
+        .order-btn.dd { background: #e54028; }
+        .order-btn.ue { background: #06c167; }
+        .order-btn.gh { background: #f65314; }
+        
+        /* reviews */
+        .reviews { background: white; border-radius: 32px; padding: 2rem; margin: 2rem 0; text-align: center; border: 1px solid #eee; }
+        .stars { color: #FFB800; font-size: 2rem; letter-spacing: 5px; }
+        .review-count { font-size: 1.3rem; color: #555; }
+        
+        /* footer */
+        footer { background: #1e1e1e; color: #aaa; padding: 2rem 0; text-align: center; margin-top: 3rem; }
+        .vape-note { background: #e0e0e0; border-radius: 16px; padding: 1rem; margin: 1rem 0; font-weight: bold; }
+        
+        @media (max-width: 600px) { h1 { font-size: 2.2rem; } }
     </style>
 </head>
 <body>
-    <header>
-        <div class="container">
-            <h1>🔥 LOS POLLOS</h1>
-            <p class="tagline">family recipes · fresh daily</p>
-        </div>
-    </header>
 
+<header>
     <div class="container">
-        <!-- Hours & contact -->
-        <div class="hours">
-            <p style="font-size: 1.5rem;">📍 123 Main St · (555) 123-4567</p>
-            <p>Mon–Sat: 11am–10pm  |  Sunday: 12pm–8pm</p>
-        </div>
-
-        <!-- Menu preview -->
-        <div class="card">
-            <h2 style="font-size: 2rem; margin-bottom: 1rem;">🔥 house favorites</h2>
-            <div class="menu-grid">
-                <div class="menu-item"><strong>Grilled Chicken Plate</strong><br> $14.99</div>
-                <div class="menu-item"><strong>Carne Asada Tacos</strong><br> $12.99</div>
-                <div class="menu-item"><strong>Veggie Burrito</strong><br> $11.49</div>
-                <div class="menu-item"><strong>Fresh Agua Fresca</strong><br> $4.99</div>
-            </div>
-        </div>
-
-        <!-- Call to action -->
-        <div style="text-align: center; margin: 3rem 0;">
-            <a href="#" class="btn">📞 CALL TO ORDER</a>
-        </div>
-
-        <p class="footer-note">✨ free demo site for local restaurants · built by givv ✨</p>
+        <h1>🔥 SMOKE & EAT</h1>
+        <p class="tagline">pizza · stromboli · wings · krispy krunchy chicken · vapes</p>
+        <div class="hours-badge">OPEN 7AM–12AM DAILY</div>
     </div>
+</header>
+
+<div class="contact-bar">
+    <div class="container">
+        📍 40 Overbrook Ave, West York, PA 17404 &nbsp; | &nbsp; <a href="tel:+17173562543">📞 (717) 356-2543</a>
+    </div>
+</div>
+
+<div class="container">
+    
+    <!-- ORDER ONLINE BUTTONS (Delivery Apps) -->
+    <div class="order-row">
+        <a href="https://www.doordash.com/store/krispy-krunchy-chicken-west-york-24015541/27957549/?fbclid=IwY2xjawQT18JleHRuA2FlbQIxMABicmlkETFPdW1jRDF2ZVNua3hpN25Zc3J0YwZhcHBfaWQQMjIyMDM5MTc4ODIwMDg5MgABHi-A7l-pWPCdUBwsWAIZ7C7v5LghtiW8tWsHYq2bt4sOGjrSsfEBnrxX8yFx_aem_zwEWSOr9JNwDDyDO3Uz7RQ&utm_source=mx_share_android" target="_blank" class="order-btn dd">🍔 DoorDash</a>
+        <a href="https://www.ubereats.com/brand/krispy-krunchy-chicken?msockid=1ed3f29879ad6c4f04e9e62978ff6d86" target="_blank" class="order-btn ue">🚗 Uber Eats</a>
+        <a href="https://www.grubhub.com/restaurant/krispy-krunchy-chicken-40-overbrook-ave-west-york/4707512?utm_source=grubhub_androidapp&utm_medium=content_owned&utm_campaign=menushare&utm_content=share-link&fbclid=IwY2xjawQT1tFleHRuA2FlbQIxMABicmlkETFPdW1jRDF2ZVNua3hpN25Zc3J0YwZhcHBfaWQQMjIyMDM5MTc4ODIwMDg5MgABHgYcmm4QwCMsMjYVY6Gk5TdB_55p3qHxhJIIC_9CaXTVfsJUk4xTgB15LfxJ_aem_9-HD_-pfAqDIxGsthOuNmw" target="_blank" class="order-btn gh">📦 Grubhub</a>
+    </div>
+
+    <!-- ========== PIZZA ========== -->
+    <h2 class="section-title">🍕 SIGNATURE PIZZA</h2>
+    <div class="menu-grid">
+        <div class="menu-card">
+            <h3>MEAT LOVERS</h3>
+            <p>pepperoni, sausage, ground beef, ham, bacon</p>
+            <div class="menu-item"><span>S</span> <span class="price">$12.99</span></div>
+            <div class="menu-item"><span>M</span> <span class="price">$14.99</span></div>
+            <div class="menu-item"><span>L</span> <span class="price">$16.99</span></div>
+        </div>
+        <div class="menu-card">
+            <h3>CHICKEN FAJITA</h3>
+            <p>chicken, green peppers, tomato, onions</p>
+            <div class="menu-item"><span>S</span> <span class="price">$12.99</span></div>
+            <div class="menu-item"><span>M</span> <span class="price">$14.99</span></div>
+            <div class="menu-item"><span>L</span> <span class="price">$16.99</span></div>
+        </div>
+        <div class="menu-card">
+            <h3>MEAL BUSTER</h3>
+            <p>pepperoni, sausage, beef, ham, bacon, mushrooms, olives, spinach</p>
+            <div class="menu-item"><span>S</span> <span class="price">$12.99</span></div>
+            <div class="menu-item"><span>M</span> <span class="price">$14.99</span></div>
+            <div class="menu-item"><span>L</span> <span class="price">$16.99</span></div>
+        </div>
+    </div>
+
+    <div class="menu-card" style="margin: 1.5rem 0;">
+        <h3>🍕 BUILD YOUR OWN PIZZA</h3>
+        <p><strong>Small $7.99</strong> · <strong>Medium $9.99</strong> · <strong>Large $12.99</strong> · extra topping $1.49</p>
+        <p><strong>Sauces:</strong> tomato, alfredo, buffalo, BBQ</p>
+        <p><strong>Toppings:</strong> pepperoni, bacon, sausage, chicken, onions, green pepper, tomatoes, mushrooms, black olives, spinach, jalapenos</p>
+    </div>
+
+    <!-- ========== STROMBOLIS ========== -->
+    <h2 class="section-title">🥩 STROMBOLIS</h2>
+    <div class="menu-grid">
+        <div class="menu-card"><h3>GROUND BEEF BOLI</h3><p>beef, cheese</p><div class="menu-item"><span>12"</span><span class="price">$12.99</span></div></div>
+        <div class="menu-card"><h3>CHICKEN CHEESESTEAK BOLI</h3><p>chicken steak, peppers, onions, cheese</p><div class="menu-item"><span>12"</span><span class="price">$12.99</span></div></div>
+    </div>
+    <p style="margin: 0 0 2rem 0;"><strong>BUILD YOUR OWN $15.99</strong> (3 toppings included, extra $1.49 each)</p>
+
+    <!-- ========== CHEESESTEAKS · WRAPS · GYROS · BURGERS ========== -->
+    <h2 class="section-title">🥪 CHEESESTEAKS & MORE</h2>
+    <div class="menu-grid">
+        <div class="menu-card"><h3>PHILLY CHEESESTEAK</h3><p>beef or chicken</p><div class="menu-item"><span>8" $8.99</span><span class="price">12" $11.99</span></div></div>
+        <div class="menu-card"><h3>WRAPS</h3><p>caesar or buffalo</p><div class="menu-item"><span>wrap $8.99</span><span class="price">combo $12.99</span></div></div>
+        <div class="menu-card"><h3>GYROS</h3><p>chicken or lamb</p><div class="menu-item"><span>gyro $7.99</span><span class="price">combo $11.99</span></div></div>
+        <div class="menu-card"><h3>BURGERS</h3><p>cheeseburger · chicken · fish</p><div class="menu-item"><span>sandwich $5.99</span><span class="price">combo $9.99</span></div></div>
+    </div>
+
+    <!-- ========== SALADS ========== -->
+    <h2 class="section-title">🥗 SALADS</h2>
+    <div class="menu-grid">
+        <div class="menu-card">caesar $9.99</div><div class="menu-card">greek $9.99</div>
+        <div class="menu-card">garden $7.99</div><div class="menu-card">grilled chicken $9.99</div>
+    </div>
+
+    <!-- ========== WINGS ========== -->
+    <h2 class="section-title">🍗 WINGS · SAUCY</h2>
+    <div class="menu-card">
+        <p><strong>FLAVORS:</strong> hot buffalo · mild buffalo · BBQ · honey BBQ</p>
+        <div class="menu-item"><span>6pc</span><span class="price">$8.99</span></div>
+        <div class="menu-item"><span>9pc</span><span class="price">$11.99</span></div>
+        <div class="menu-item"><span>12pc</span><span class="price">$14.99</span></div>
+        <p class="badge">1 free dip · extra dip $0.50</p>
+    </div>
+
+    <!-- ========== FRYER WORLD ========== -->
+    <h2 class="section-title">🍟 FRYER WORLD</h2>
+    <div class="menu-grid">
+        <div class="menu-card">tilapia w/fries 2pc $8.99</div>
+        <div class="menu-card">nuggets 6pc $7.99 / 10pc $9.99</div>
+        <div class="menu-card">strips 3pc $7.99 / 5pc $9.99</div>
+        <div class="menu-card">mozzarella sticks 6pc $6.99</div>
+        <div class="menu-card">fried mushrooms 12pc $7.99</div>
+        <div class="menu-card">jalapeno poppers 6pc $6.99</div>
+        <div class="menu-card">onion rings 8pc $6.99</div>
+    </div>
+
+    <!-- ========== RICE PLATTERS ========== -->
+    <h2 class="section-title">🍚 RICE PLATTERS</h2>
+    <div class="menu-grid">
+        <div class="menu-card"><h3>chicken</h3><div class="price">$11.99</div></div>
+        <div class="menu-card"><h3>lamb</h3><div class="price">$11.99</div></div>
+        <div class="menu-card"><h3>tilapia</h3><div class="price">$11.99</div></div>
+        <div class="menu-card"><h3>mix</h3><div class="price">$13.99</div></div>
+    </div>
+    <p>white sauce · hot sauce · includes soda</p>
+
+    <!-- ========== HEAVEN OF FRIES ========== -->
+    <h2 class="section-title">🍟 HEAVEN OF FRIES</h2>
+    <div class="menu-grid">
+        <div class="menu-card">regular S $2.99 / L $4.99</div>
+        <div class="menu-card">pizza fries $7.99</div>
+        <div class="menu-card">loaded bacon fries $7.99</div>
+        <div class="menu-card">philly steak fries $7.99</div>
+    </div>
+
+    <!-- ========== SMOOTHIES ========== -->
+    <h2 class="section-title">🥤 SMOOTHIES</h2>
+    <div class="menu-grid">
+        <div class="menu-card">sunrise (banana, mango, orange)</div>
+        <div class="menu-card">berry breeze (banana, strawberry, pineapple)</div>
+        <div class="menu-card">sunny banana</div>
+        <div class="menu-card">build your own: banana, strawberry, mango, pineapple, orange</div>
+    </div>
+
+    <!-- ========== RED SEAL SPECIALS ========== -->
+    <h2 class="section-title">🔴 RED SEAL SPECIALS</h2>
+    <div class="menu-grid">
+        <div class="menu-card"><h3>8" pizza + 5pc wings</h3><div class="price">$12.99</div></div>
+        <div class="menu-card"><h3>RED SEAL CHEESE PIZZA</h3>12" $6.99 · 14" $8.99 · 16" $11.99<br>toppings +$1.25</div>
+    </div>
+
+    <!-- ========== DEALS ========== -->
+    <h2 class="section-title">💰 TODAY'S DEALS</h2>
+    <div class="menu-grid">
+        <div class="menu-card">🔥 1 large 2 topping pizza + 6pc wings + 1L soda <strong>$19.99</strong></div>
+        <div class="menu-card">🔥 1 rice platter + 1 wrap + 1L soda <strong>$17.99</strong></div>
+        <div class="menu-card">🔥 25pc wings <strong>$29.99</strong></div>
+        <div class="menu-card">🔥 2 large 2 topping pizzas <strong>$14.99</strong> (MON–WED)</div>
+    </div>
+
+    <!-- ========== VAPES ========== -->
+    <h2 class="section-title">💨 VAPES · 35K PUFFS</h2>
+    <div class="vape-note">
+        <p><strong>NEW FLAVORS:</strong> White Yummy Ice · Watermelon Ice · Blue Raz Ice · Triple Berry · Rainbow · Miami Mint · Raspberry Watermelon · Orange Mango · Peach Passionfruit · Sour Apple Ice</p>
+        <p>🚭 must be 21+</p>
+    </div>
+
+    <!-- ========== APPETIZERS (from red seal) ========== -->
+    <h2 class="section-title">🍽️ APPETIZERS</h2>
+    <div class="menu-grid">
+        <div class="menu-card">mozzarella sticks SM $3.99 / LG $6.99</div>
+        <div class="menu-card">egg roll $1.99 (cheesesteak or southwest)</div>
+        <div class="menu-card">onion rings $3.99</div>
+        <div class="menu-card">chicken nuggets 5pc $2.99 / 10pc $4.49</div>
+        <div class="menu-card">fried fish 1pc $5.59 / 2pc $9.99 / 3pc $13.99</div>
+        <div class="menu-card">boneless wings 6pc $5.49 / 10pc $6.99</div>
+    </div>
+
+    <!-- ========== REVIEWS ========== -->
+    <div class="reviews">
+        <div class="stars">★★★★☆</div>
+        <p style="font-size: 2rem; font-weight: bold;">4.4 stars</p>
+        <p class="review-count">Based on 44 Google reviews</p>
+        <p style="margin-top: 1rem;">"Best pizza in town!" · "Great local spot" · "Krispy Krunchy chicken is 🔥"</p>
+    </div>
+
+    <!-- CALL BUTTON (prominent) -->
+    <div style="text-align: center; margin: 3rem 0;">
+        <a href="tel:+17173562543" class="order-btn" style="background: #222; font-size: 2rem; padding: 1.2rem 3rem;">📞 CALL NOW · (717) 356-2543</a>
+    </div>
+
+</div>
+
+<footer>
+    <div class="container">
+        <p><strong>SMOKE & EAT</strong> · 40 Overbrook Ave, West York, PA 17404</p>
+        <p>Daily 7am–12am · Lunch 10am–10pm</p>
+        <p style="margin-top: 1rem; color: #666;">website built for local restaurants · contact for updates</p>
+    </div>
+</footer>
+
 </body>
 </html>
